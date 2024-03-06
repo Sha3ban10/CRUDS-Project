@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Maincolor: #fff;
+    --MainBG: #333;
+}
+
+body{
+    color: var(--Maincolor);
+    background-color: var(--MainBG);
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem ;
+}
+input{
+    transition: 0.5s !important;
+}
+input:focus{
+    transform: scale(1.05);
+}
+.btn{
+    transition: 0.5s !important;
+} 
+.btn:not(table button):hover{
+    letter-spacing: 1px;
+}
+tr{
+    text-transform: uppercase;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crude</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="Cruds w-75 m-auto container mt-4">
+        <div class="Headers text-center text-uppercase  ">
+            <h1 class="">Cruds</h1>
+            <p class="h5">product management system</p>
+        </div>
+        <div class="Inputs-form mt-4">
+            <input type="text" placeholder="title" id="title" class="form-control">
+            <div class="Price-total row  justify-content-center">
+                <div class="col-md-10 inputs"> 
+                    <input onkeyup="GetTotal()"  type="number" placeholder="Price" id="Price" class="form-control">
+                    <input onkeyup="GetTotal()" type="number" placeholder="Taxes" id="Taxes" class="form-control">
+                    <input onkeyup="GetTotal()" type="number" placeholder="Ads" id="Ads" class="form-control">
+                    <input onkeyup="GetTotal()" type="number" placeholder="Discount" id="Discount" class="form-control">
+                </div>
+                <div class="col-md-2 inputs">
+                    <span class="text-bg-danger p-1 rounded-3" id="total-count">total : <span id="total"></span></span>
+                </div>
+                <div class="col-md-12 inputs">
+                    <input type="number" id="Count" placeholder="Count :Max (100)" class="form-control">
+                    <input type="text" id="Category" placeholder="Category" class="form-control">
+                </div>
+                <button class="btn btn-success my-3 w-75 " id="submit" onclick="Create()">Create</button>
+            </div>
+        </div>
+        <div class="Data">
+            <input type="text" onkeyup="SearchProduct(this.value)" placeholder="Search" id="Search" class="form-control">
+            <div class="d-flex justify-content-between gap-4 my-3">
+                <button onclick="GetSearchMode(this.id)"  class="btn btn-success w-100" id="Title"> Serach By Title </button>
+                <button onclick="GetSearchMode(this.id)"  class="btn btn-success w-100" id="Category"> Serach By Category </button>
+            </div>
+            <div id="DeleteAll"></div>
+
+            <table class="w-100 my-3 table table-striped-columns table-dark ">
+                <tr class="text-center"> 
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>ADS</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody class="text-center" id="Data">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>
